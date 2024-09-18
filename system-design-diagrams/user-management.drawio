@@ -1,0 +1,101 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="User Management Service - Container Diagram">
+    <mxGraphModel dx="1468" dy="1081" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- User Management Service Container -->
+        <mxCell id="user-management-service" value="User Management Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="180" y="20" width="600" height="650" as="geometry" />
+        </mxCell>
+
+        <!-- Auth API -->
+        <mxCell id="auth-api" value="Auth API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BBDEFB;" vertex="1" parent="user-management-service">
+          <mxGeometry x="20" y="50" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Authentication Service -->
+        <mxCell id="authentication-service" value="Authentication Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C8E6C9;" vertex="1" parent="user-management-service">
+          <mxGeometry x="220" y="50" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Authorization Service -->
+        <mxCell id="authorization-service" value="Authorization Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C8E6C9;" vertex="1" parent="user-management-service">
+          <mxGeometry x="420" y="50" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- User API -->
+        <mxCell id="user-api" value="User API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BBDEFB;" vertex="1" parent="user-management-service">
+          <mxGeometry x="20" y="180" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Registration Service -->
+        <mxCell id="registration-service" value="Registration Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C8E6C9;" vertex="1" parent="user-management-service">
+          <mxGeometry x="220" y="180" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Profile Service -->
+        <mxCell id="profile-service" value="Profile Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C8E6C9;" vertex="1" parent="user-management-service">
+          <mxGeometry x="420" y="180" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Role API -->
+        <mxCell id="role-api" value="Role API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BBDEFB;" vertex="1" parent="user-management-service">
+          <mxGeometry x="20" y="310" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Role Service -->
+        <mxCell id="role-service" value="Role Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C8E6C9;" vertex="1" parent="user-management-service">
+          <mxGeometry x="220" y="310" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Permission Service -->
+        <mxCell id="permission-service" value="Permission Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#C8E6C9;" vertex="1" parent="user-management-service">
+          <mxGeometry x="420" y="310" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Session API -->
+        <mxCell id="session-api" value="Session API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#BBDEFB;" vertex="1" parent="user-management-service">
+          <mxGeometry x="20" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Session Store -->
+        <mxCell id="session-store" value="Session Store (Redis)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFD54F;" vertex="1" parent="user-management-service">
+          <mxGeometry x="220" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 2FA Service -->
+        <mxCell id="2fa-service" value="2FA Service" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFCCBC;" vertex="1" parent="user-management-service">
+          <mxGeometry x="420" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Connectors (Edges) -->
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="auth-api" target="authentication-service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="authentication-service" target="authorization-service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="user-api" target="registration-service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="registration-service" target="profile-service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="role-api" target="role-service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="role-service" target="permission-service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="session-api" target="session-store">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="session-store" target="2fa-service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
