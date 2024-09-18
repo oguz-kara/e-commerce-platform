@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"? agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:130.0) Gecko/20100101 Firefox/130.0" version="24.7.14">
+<mxfile host="app.diagrams.net">
+  <diagram name="Container Diagram - E-Commerce Platform">
+    <mxGraphModel dx="947" dy="454" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Customer Storefront -->
+        <mxCell id="customer-storefront" value="Customer Storefront (Next.js)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;" vertex="1" parent="1">
+          <mxGeometry x="180" y="60" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Admin Dashboard -->
+        <mxCell id="admin-dashboard" value="Admin Dashboard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;" vertex="1" parent="1">
+          <mxGeometry x="400" y="60" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Mobile App -->
+        <mxCell id="mobile-app" value="Mobile App" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#BBDEFB;" vertex="1" parent="1">
+          <mxGeometry x="620" y="60" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- API Gateway -->
+        <mxCell id="api-gateway" value="API Gateway" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEB3B;" vertex="1" parent="1">
+          <mxGeometry x="320" y="180" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Store Management Service -->
+        <mxCell id="store-management" value="Store Management Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;" vertex="1" parent="1">
+          <mxGeometry x="180" y="320" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Product Management Service -->
+        <mxCell id="product-management" value="Product Management Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;" vertex="1" parent="1">
+          <mxGeometry x="400" y="320" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Order Management Service -->
+        <mxCell id="order-management" value="Order Management Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;" vertex="1" parent="1">
+          <mxGeometry x="620" y="320" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- User Management Service -->
+        <mxCell id="user-management" value="User Management Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;" vertex="1" parent="1">
+          <mxGeometry x="180" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Payment Service -->
+        <mxCell id="payment-service" value="Payment Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;" vertex="1" parent="1">
+          <mxGeometry x="400" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- PostgreSQL Database -->
+        <mxCell id="postgresql" value="PostgreSQL (Relational DB)" style="rounded=1;whiteSpace=wrap;html=1;shape=cylinder;fillColor=#B3E5FC;" vertex="1" parent="1">
+          <mxGeometry x="620" y="440" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- MongoDB -->
+        <mxCell id="mongodb" value="MongoDB (Document DB)" style="rounded=1;whiteSpace=wrap;html=1;shape=cylinder;fillColor=#B3E5FC;" vertex="1" parent="1">
+          <mxGeometry x="180" y="560" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Redis -->
+        <mxCell id="redis" value="Redis (Caching)" style="rounded=1;whiteSpace=wrap;html=1;shape=cylinder;fillColor=#B3E5FC;" vertex="1" parent="1">
+          <mxGeometry x="400" y="560" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- External System: Stripe -->
+        <mxCell id="stripe" value="Stripe (Payment)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCCBC;" vertex="1" parent="1">
+          <mxGeometry x="180" y="680" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- External System: SendGrid -->
+        <mxCell id="sendgrid" value="SendGrid (Email)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFCCBC;" vertex="1" parent="1">
+          <mxGeometry x="400" y="680" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="customer-storefront" target="api-gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="admin-dashboard" target="api-gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mobile-app" target="api-gateway">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="api-gateway" target="store-management">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="api-gateway" target="product-management">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="api-gateway" target="order-management">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="api-gateway" target="user-management">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="api-gateway" target="payment-service">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
